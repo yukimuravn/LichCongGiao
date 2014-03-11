@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWRevealViewController.h"
+#import "DateViewController.h"
+#import "MenuViewController.h"
+
+@class SWRevealViewController;
 
 @interface HomeAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SWRevealViewController *viewController;
 
 @end

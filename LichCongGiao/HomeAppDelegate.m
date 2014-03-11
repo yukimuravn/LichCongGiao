@@ -12,10 +12,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.window = window;
+	
+	DateViewController *dateViewController = [[DateViewController alloc] init];
+	MenuViewController *menuViewController = [[MenuViewController alloc] init];
+	
+	UINavigationController *dateNavigationController = [[UINavigationController alloc] initWithRootViewController:dateViewController];
+//    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+	
+	SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:menuViewController frontViewController:dateNavigationController];
+    revealController.delegate = self;
+    
+//    RightViewController *rightViewController = rightViewController = [[RightViewController alloc] init];
+//    rightViewController.view.backgroundColor = [UIColor greenColor];
+    
+//    revealController.rightViewController = rightViewController;
+    
+    //revealController.bounceBackOnOverdraw=NO;
+    //revealController.stableDragOnOverdraw=YES;
+    
+	self.viewController = revealController;
+	
+	self.window.rootViewController = self.viewController;
+	[self.window makeKeyAndVisible];
+	return YES;
+
 }
-							
+
+#pragma mark - SWRevealViewDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)revealController:(SWRevealViewController *)revealController animationControllerForOperation:(SWRevealControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    if ( operation != SWRevealControllerOperationReplaceRightController )
+        return nil;
+    
+//    if ( [toVC isKindOfClass:[RightViewController class]] )
+//    {
+//        if ( [(RightViewController*)toVC wantsCustomAnimation] )
+//        {
+//            id<UIViewControllerAnimatedTransitioning> animationController = [[CustomAnimationController alloc] init];
+//            return animationController;
+//        }
+//    }
+    
+    return nil;
+}
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
