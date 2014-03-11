@@ -81,7 +81,7 @@
     [self.datePageControl setCurrentPage:0];
     [self.datePageControl setCurrentPageIndicatorTintColor:[UIColor redColor]];
     [self.datePageControl setPageIndicatorTintColor:[UIColor whiteColor]];
-    [self.datePageVC.view addSubview:self.datePageControl];
+//    [self.datePageVC.view addSubview:self.datePageControl];
 }
 
 - (ImageViewController *)viewControllerAtIndex:(NSUInteger)index

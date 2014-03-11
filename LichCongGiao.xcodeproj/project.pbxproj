@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AA5767C18CF5F22001D50C6 /* info-church@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA5767B18CF5F22001D50C6 /* info-church@2x.png */; };
 		1ABC0EF618CE17650086484F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC0EF518CE17650086484F /* Foundation.framework */; };
 		1ABC0EF818CE17650086484F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC0EF718CE17650086484F /* CoreGraphics.framework */; };
 		1ABC0EFA18CE17650086484F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABC0EF918CE17650086484F /* UIKit.framework */; };
@@ -56,6 +57,15 @@
 		1ABC0FB818CF4E1F0086484F /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FB618CF4E1F0086484F /* SettingViewController.xib */; };
 		1ABC0FBD18CF4E340086484F /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC0FBB18CF4E340086484F /* InfoViewController.m */; };
 		1ABC0FBE18CF4E340086484F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FBC18CF4E340086484F /* InfoViewController.xib */; };
+		1ABC0FC418CF51F60086484F /* AppIcon58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FC118CF51F60086484F /* AppIcon58@2x.png */; };
+		1ABC0FC518CF51F60086484F /* AppIcon80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FC218CF51F60086484F /* AppIcon80@2x.png */; };
+		1ABC0FC618CF51F60086484F /* AppIcon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FC318CF51F60086484F /* AppIcon120@2x.png */; };
+		1ABC0FC918CF58720086484F /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC0FC818CF58720086484F /* InfoCell.m */; };
+		1ABC0FCC18CF58830086484F /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCB18CF58830086484F /* InfoCell.xib */; };
+		1ABC0FD118CF5BF80086484F /* info-fb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCD18CF5BF80086484F /* info-fb@2x.png */; };
+		1ABC0FD218CF5BF80086484F /* info-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */; };
+		1ABC0FD318CF5BF80086484F /* info-www@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCF18CF5BF80086484F /* info-www@2x.png */; };
+		1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AA5767B18CF5F22001D50C6 /* info-church@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-church@2x.png"; path = "Image/info-church@2x.png"; sourceTree = "<group>"; };
 		1ABC0EF218CE17650086484F /* LichCongGiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LichCongGiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABC0EF518CE17650086484F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1ABC0EF718CE17650086484F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +144,16 @@
 		1ABC0FBA18CF4E340086484F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		1ABC0FBB18CF4E340086484F /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		1ABC0FBC18CF4E340086484F /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		1ABC0FC118CF51F60086484F /* AppIcon58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon58@2x.png"; path = "Image/AppIcon58@2x.png"; sourceTree = "<group>"; };
+		1ABC0FC218CF51F60086484F /* AppIcon80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon80@2x.png"; path = "Image/AppIcon80@2x.png"; sourceTree = "<group>"; };
+		1ABC0FC318CF51F60086484F /* AppIcon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcon120@2x.png"; path = "Image/AppIcon120@2x.png"; sourceTree = "<group>"; };
+		1ABC0FC718CF58720086484F /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		1ABC0FC818CF58720086484F /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
+		1ABC0FCB18CF58830086484F /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		1ABC0FCD18CF5BF80086484F /* info-fb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-fb@2x.png"; path = "Image/info-fb@2x.png"; sourceTree = "<group>"; };
+		1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-twitter@2x.png"; path = "Image/info-twitter@2x.png"; sourceTree = "<group>"; };
+		1ABC0FCF18CF5BF80086484F /* info-www@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-www@2x.png"; path = "Image/info-www@2x.png"; sourceTree = "<group>"; };
+		1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-yukimura@2x.png"; path = "Image/info-yukimura@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +275,14 @@
 		1ABC0F4418CEBFC80086484F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				1AA5767B18CF5F22001D50C6 /* info-church@2x.png */,
+				1ABC0FCD18CF5BF80086484F /* info-fb@2x.png */,
+				1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */,
+				1ABC0FCF18CF5BF80086484F /* info-www@2x.png */,
+				1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */,
+				1ABC0FC118CF51F60086484F /* AppIcon58@2x.png */,
+				1ABC0FC218CF51F60086484F /* AppIcon80@2x.png */,
+				1ABC0FC318CF51F60086484F /* AppIcon120@2x.png */,
 				1ABC0F8B18CF458E0086484F /* menu-cell-00@2x.png */,
 				1ABC0F8C18CF458E0086484F /* menu-cell-01@2x.png */,
 				1ABC0F8D18CF458E0086484F /* menu-cell-02@2x.png */,
@@ -334,6 +363,7 @@
 			children = (
 				1ABC0F4518CEBFD20086484F /* ImageViewController */,
 				1ABC0F6C18CF3DF00086484F /* MenuCell */,
+				1ABC0FCA18CF58760086484F /* InfoCell */,
 			);
 			name = SubClass;
 			sourceTree = "<group>";
@@ -395,6 +425,16 @@
 				1ABC0FBC18CF4E340086484F /* InfoViewController.xib */,
 			);
 			name = InfoViewController;
+			sourceTree = "<group>";
+		};
+		1ABC0FCA18CF58760086484F /* InfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				1ABC0FC718CF58720086484F /* InfoCell.h */,
+				1ABC0FC818CF58720086484F /* InfoCell.m */,
+				1ABC0FCB18CF58830086484F /* InfoCell.xib */,
+			);
+			name = InfoCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,30 +517,39 @@
 				1ABC0F9518CF458E0086484F /* menu-cell-03@2x.png in Resources */,
 				1ABC0FAC18CF4D660086484F /* PrayerViewController.xib in Resources */,
 				1ABC0F9318CF458E0086484F /* menu-cell-01@2x.png in Resources */,
+				1ABC0FC518CF51F60086484F /* AppIcon80@2x.png in Resources */,
 				1ABC0F6118CF02D50086484F /* img3@2x~iphone.png in Resources */,
 				1ABC0FB218CF4E0E0086484F /* MusicViewController.xib in Resources */,
 				1ABC0F9618CF458E0086484F /* menu-cell-04@2x.png in Resources */,
 				1ABC0F3718CEBFA30086484F /* ImageViewController.xib in Resources */,
+				1AA5767C18CF5F22001D50C6 /* info-church@2x.png in Resources */,
 				1ABC0F9418CF458E0086484F /* menu-cell-02@2x.png in Resources */,
+				1ABC0FCC18CF58830086484F /* InfoCell.xib in Resources */,
 				1ABC0F6818CF04BE0086484F /* menu-icon@2x.png in Resources */,
 				1ABC0F6318CF02D50086484F /* img5@2x~iphone.png in Resources */,
 				1ABC0F5E18CF02D50086484F /* img0@2x~iphone.png in Resources */,
 				1ABC0F3118CEB1EF0086484F /* DateViewController.xib in Resources */,
+				1ABC0FC418CF51F60086484F /* AppIcon58@2x.png in Resources */,
 				1ABC0F0E18CE17650086484F /* Images.xcassets in Resources */,
 				1ABC0F0018CE17650086484F /* InfoPlist.strings in Resources */,
 				1ABC0F0918CE17650086484F /* Main.storyboard in Resources */,
 				1ABC0F5F18CF02D50086484F /* img1@2x~iphone.png in Resources */,
 				1ABC0FA618CF4C5A0086484F /* SaintViewController.xib in Resources */,
+				1ABC0FD218CF5BF80086484F /* info-twitter@2x.png in Resources */,
+				1ABC0FD318CF5BF80086484F /* info-www@2x.png in Resources */,
 				1ABC0F4A18CECB730086484F /* MenuViewController.xib in Resources */,
 				1ABC0F9D18CF490E0086484F /* MonthViewController.xib in Resources */,
 				1ABC0FB818CF4E1F0086484F /* SettingViewController.xib in Resources */,
 				1ABC0F6718CF04BE0086484F /* menu-icon.png in Resources */,
 				1ABC0F9718CF458E0086484F /* menu-cell-05@2x.png in Resources */,
 				1ABC0F6E18CF3DFD0086484F /* MenuCell.xib in Resources */,
+				1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */,
 				1ABC0F6218CF02D50086484F /* img4@2x~iphone.png in Resources */,
 				1ABC0F6018CF02D50086484F /* img2@2x~iphone.png in Resources */,
 				1ABC0F9218CF458E0086484F /* menu-cell-00@2x.png in Resources */,
 				1ABC0FBE18CF4E340086484F /* InfoViewController.xib in Resources */,
+				1ABC0FD118CF5BF80086484F /* info-fb@2x.png in Resources */,
+				1ABC0FC618CF51F60086484F /* AppIcon120@2x.png in Resources */,
 				1ABC0F9818CF458E0086484F /* menu-cell-06@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +574,7 @@
 				1ABC0F6B18CF3DEA0086484F /* MenuCell.m in Sources */,
 				1ABC0FAB18CF4D660086484F /* PrayerViewController.m in Sources */,
 				1ABC0F0218CE17650086484F /* main.m in Sources */,
+				1ABC0FC918CF58720086484F /* InfoCell.m in Sources */,
 				1ABC0F3618CEBFA30086484F /* ImageViewController.m in Sources */,
 				1ABC0F0618CE17650086484F /* HomeAppDelegate.m in Sources */,
 				1ABC0FBD18CF4E340086484F /* InfoViewController.m in Sources */,
@@ -742,6 +792,7 @@
 				1ABC0F2618CE17650086484F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ABC0F2718CE17650086484F /* Build configuration list for PBXNativeTarget "LichCongGiaoTests" */ = {
 			isa = XCConfigurationList;
@@ -750,6 +801,7 @@
 				1ABC0F2918CE17650086484F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
