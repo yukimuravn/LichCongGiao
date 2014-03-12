@@ -38,21 +38,27 @@
     SWRevealViewController *revealController = [self revealViewController];
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
-    revealController.rearViewRevealWidth = 240;
-    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    UIImage *menuIcon = [UIImage imageNamed:@"menu-icon"];
+    UIButton *menuBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, menuIcon.size.width, menuIcon.size.height)];
+    [menuBtn setBackgroundImage:menuIcon forState:UIControlStateNormal];
+    [menuBtn setShowsTouchWhenHighlighted:YES];
+    [menuBtn addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithCustomView:menuBtn];
     self.navigationItem.leftBarButtonItem = menu_btn;
-    
     
     // Do any additional setup after loading the view from its nib.
     self.title = @"Ngày";
-    [self.view setBackgroundColor:[UIColor lightGrayColor]];
+    [self.view setBackgroundColor:[UIColor redColor]];
     isShowMenu = NO;
-    
+    if (IS_IOS_7) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+
     //Set Up DatePageViewController
     if (!self.datePageVC) {
         self.datePageVC = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
         [self.datePageVC.view setBackgroundColor:[UIColor lightGrayColor]];
-        [self.datePageVC.view setFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 164)];
+        [self.datePageVC.view setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
         self.datePageVC.delegate = self;
         self.datePageVC.dataSource = self;
     }

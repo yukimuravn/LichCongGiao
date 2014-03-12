@@ -32,8 +32,14 @@
     
     //Set Up MenuButton
     SWRevealViewController *revealController = [self revealViewController];
-    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    UIImage *menuIcon = [UIImage imageNamed:@"menu-icon"];
+    UIButton *menuBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, menuIcon.size.width, menuIcon.size.height)];
+    [menuBtn setBackgroundImage:menuIcon forState:UIControlStateNormal];
+    [menuBtn setShowsTouchWhenHighlighted:YES];
+    [menuBtn addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithCustomView:menuBtn];
     self.navigationItem.leftBarButtonItem = menu_btn;
+
 }
 
 - (void)didReceiveMemoryWarning

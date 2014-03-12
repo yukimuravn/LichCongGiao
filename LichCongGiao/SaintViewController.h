@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "SaintCell.h"
+#import "Saint.h"
+#import "Define.h"
 
-@interface SaintViewController : UIViewController
+@interface SaintViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) UICollectionView *saintCollectionView;
 
 @end

@@ -63,10 +63,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    CGSize size = [[UIScreen mainScreen] bounds].size;
     if (!self.imgView) {
         self.imgView = [[UIImageView alloc]init];
-        [self.imgView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        [self.imgView setFrame:CGRectMake(0, 0, size.width, size.height)];
     }
     
 }

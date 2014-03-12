@@ -37,7 +37,8 @@
 //    [self.view setBackgroundColor:[UIColor colorWithRed:0.0f green:51/255.0f blue:102/255.0f alpha:1]];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     if (!_menuTableView) {
-        self.menuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+        CGSize size = [[UIScreen mainScreen] bounds].size;
+        self.menuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, size.width, size.height) style:UITableViewStylePlain];
         self.menuTableView.dataSource = self;
         self.menuTableView.delegate = self;
         [self.menuTableView setBackgroundColor:[UIColor clearColor]];
@@ -88,7 +89,7 @@
     
     cell.label.text = [menuArrayName objectAtIndex:indexPath.row];
     cell.label.textColor = [UIColor grayColor];
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu-cell-0%i",indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu-cell-0%li",(long)indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

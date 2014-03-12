@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "InfoCell.h"
+#import "Define.h"
 
 @interface InfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

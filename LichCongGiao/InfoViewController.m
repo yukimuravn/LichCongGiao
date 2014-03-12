@@ -36,25 +36,43 @@
     infoArrayImage = [NSMutableArray arrayWithObjects:@"info-yukimura", @"info-www", @"info-fb", @"info-twitter", nil];
     
     self.title = @"Thông Tin";
+    if (IS_IOS_7){
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     //Set Up MenuButton
     SWRevealViewController *revealController = [self revealViewController];
-    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu-icon"] style:UIBarButtonItemStyleBordered target:revealController action:@selector(revealToggle:)];
+    UIImage *menuIcon = [UIImage imageNamed:@"menu-icon"];
+    UIButton *menuBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, menuIcon.size.width, menuIcon.size.height)];
+    [menuBtn setBackgroundImage:menuIcon forState:UIControlStateNormal];
+    [menuBtn setShowsTouchWhenHighlighted:YES];
+    [menuBtn addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithCustomView:menuBtn];
     self.navigationItem.leftBarButtonItem = menu_btn;
     
+    CGSize size = [[UIScreen mainScreen] bounds].size;
+    NSLog(@"%@",NSStringFromCGSize(size));
     if (!_infoTableView) {
-        self.infoTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 300, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+        self.infoTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, size.height-[infoArrayName count]*48 - 64, size.width, [infoArrayImage count]*48) style:UITableViewStylePlain];
         self.infoTableView.dataSource = self;
         self.infoTableView.delegate = self;
-        [self.infoTableView setBackgroundColor:[UIColor clearColor]];
+        [self.infoTableView setBackgroundColor:[UIColor whiteColor]];
+//        UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
+//        [self.infoTableView setTableHeaderView:view];
+//        [self.infoTableView setTableFooterView:view];
+//        [self.infoTableView setSeparatorInset:UIEdgeInsetsZero];
         [self.infoTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [self.infoTableView setScrollEnabled:NO];
         [self.view addSubview:self.infoTableView];
     }
     
     UIImageView *infoImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"info-church"]];
-    [infoImageView setFrame:CGRectMake(59, 140, 202, 144)];
+    [infoImageView setFrame:CGRectMake(59, size.height/2 - 220, 202, 144)];
+//    if (IS_IOS_6) {
+//        [infoImageView setFrame:CGRectMake(59, size.height/2 - 220 - 64, 202, 144)];
+//    }
     [self.view addSubview:infoImageView];
     
     UILabel *infoName = [[UILabel alloc]initWithFrame:CGRectZero];
@@ -87,10 +105,12 @@
 }
 
 #pragma mark - UITableViewDataSource
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 48;
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView
 {
     return 1;
