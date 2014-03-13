@@ -141,5 +141,16 @@
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%i",indexPath.row);
+    Saint *saint = [saintArray objectAtIndex:indexPath.row];
+    SaintInfoViewController *saintInfoVC = [[SaintInfoViewController alloc]initWithNibName:@"SaintInfoViewController" bundle:nil];
+    saintInfoVC.saintName = saint.name;
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Trở Lại" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    [self.navigationController pushViewController:saintInfoVC animated:YES];
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+}
 
 @end

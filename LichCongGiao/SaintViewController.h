@@ -11,6 +11,7 @@
 #import "SaintCell.h"
 #import "Saint.h"
 #import "Define.h"
+#import "SaintInfoViewController.h"
 
 @interface SaintViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 

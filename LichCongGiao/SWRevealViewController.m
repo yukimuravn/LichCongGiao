@@ -888,7 +888,6 @@ static NSString * const SWSegueRightIdentifier = @"sw_right";
     return _panGestureRecognizer;
 }
 
-
 - (UITapGestureRecognizer*)tapGestureRecognizer
 {
     if ( _tapGestureRecognizer == nil )

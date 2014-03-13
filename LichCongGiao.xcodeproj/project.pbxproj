@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02343318D209A10013356D /* SaintInfoViewController.m */; };
+		1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A02343418D209A10013356D /* SaintInfoViewController.xib */; };
 		1A92E2C718D0A38B003E9F97 /* Saint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A92E2C618D0A38B003E9F97 /* Saint.m */; };
 		1A92E2C918D0AA52003E9F97 /* search-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */; };
 		1AA5767C18CF5F22001D50C6 /* info-church@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA5767B18CF5F22001D50C6 /* info-church@2x.png */; };
@@ -85,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A02343218D209A10013356D /* SaintInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaintInfoViewController.h; sourceTree = "<group>"; };
+		1A02343318D209A10013356D /* SaintInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaintInfoViewController.m; sourceTree = "<group>"; };
+		1A02343418D209A10013356D /* SaintInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaintInfoViewController.xib; sourceTree = "<group>"; };
 		1A92E2C518D0A38B003E9F97 /* Saint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saint.h; sourceTree = "<group>"; };
 		1A92E2C618D0A38B003E9F97 /* Saint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saint.m; sourceTree = "<group>"; };
 		1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-icon@2x.png"; path = "Image/search-icon@2x.png"; sourceTree = "<group>"; };
@@ -197,6 +202,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A02343718D209AF0013356D /* SaintInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A02343218D209A10013356D /* SaintInfoViewController.h */,
+				1A02343318D209A10013356D /* SaintInfoViewController.m */,
+				1A02343418D209A10013356D /* SaintInfoViewController.xib */,
+			);
+			name = SaintInfoViewController;
+			sourceTree = "<group>";
+		};
 		1A92E2CA18D0B24B003E9F97 /* Saint */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +389,7 @@
 		1ABC0F9F18CF4BA30086484F /* MainClass */ = {
 			isa = PBXGroup;
 			children = (
+				1A02343718D209AF0013356D /* SaintInfoViewController */,
 				1A92E2CB18D0DD39003E9F97 /* Define.h */,
 				1ABC0F4B18CECB760086484F /* MenuViewController */,
 				1ABC0FA118CF4BBB0086484F /* SWRevealViewController */,
@@ -587,6 +603,7 @@
 				1ABC0F6818CF04BE0086484F /* menu-icon@2x.png in Resources */,
 				1ABC0F6318CF02D50086484F /* img5@2x~iphone.png in Resources */,
 				1AD4B75A18D00E910043609E /* SaintCell.xib in Resources */,
+				1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */,
 				1ABC0F5E18CF02D50086484F /* img0@2x~iphone.png in Resources */,
 				1ABC0F3118CEB1EF0086484F /* DateViewController.xib in Resources */,
 				1ABC0FC418CF51F60086484F /* AppIcon58@2x.png in Resources */,
@@ -638,6 +655,7 @@
 				1ABC0FAB18CF4D660086484F /* PrayerViewController.m in Sources */,
 				1ABC0F0218CE17650086484F /* main.m in Sources */,
 				1ABC0FC918CF58720086484F /* InfoCell.m in Sources */,
+				1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */,
 				1ABC0F3618CEBFA30086484F /* ImageViewController.m in Sources */,
 				1ABC0F0618CE17650086484F /* HomeAppDelegate.m in Sources */,
 				1ABC0FBD18CF4E340086484F /* InfoViewController.m in Sources */,
