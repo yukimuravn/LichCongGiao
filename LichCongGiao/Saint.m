@@ -12,11 +12,11 @@
 @synthesize image = _image;
 @synthesize name = _name;
 
-- (id)initWithName:(NSString *)saintName andImage:(UIImage *)saintImgage
+- (id)initWithName:(NSString *)saintName andImage:(UIImage *)saintImage
 {
     if (self = [super init]){
 		self.name = saintName;
-        self.image = saintImgage;
+        self.image = [ImageManipulator makeRoundCornerImage:saintImage :saintImage.size.width/2 :saintImage.size.height/2];
 	}
 	return self;
 }

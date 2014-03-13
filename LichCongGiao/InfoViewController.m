@@ -134,7 +134,7 @@
     
     cell.label.text = [infoArrayName objectAtIndex:indexPath.row];
     cell.label.textColor = [UIColor grayColor];
-    cell.imageView.image = [UIImage imageNamed:[infoArrayImage objectAtIndex:indexPath.row]];
+    cell.imgView.image = [UIImage imageNamed:[infoArrayImage objectAtIndex:indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

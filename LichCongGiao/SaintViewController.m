@@ -133,8 +133,11 @@
 //    [cell.label setText:[NSString stringWithFormat:@"img%li", (long)indexPath.row]];
     Saint *saint = [saintArray objectAtIndex:indexPath.row];
     [cell.imageView setImage:saint.image];
+    [cell.imageView setBackgroundColor:[UIColor clearColor]];
     [cell.label setText:saint.name];
-    [cell.label setBackgroundColor:[UIColor purpleColor]];
+//    [cell.label setBackgroundColor:[UIColor purpleColor]];
+//    [cell.contentView setOpaque:YES];
+//    [cell.backgroundView setOpaque:YES];
     return cell;
 }
 

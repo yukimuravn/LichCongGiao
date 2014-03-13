@@ -10,7 +10,7 @@
 
 @interface InfoCell : UITableViewCell
 
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIImageView *imgView;
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
 @end

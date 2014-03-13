@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ImageManipulator.h"
 
 @interface Saint : NSObject
 
