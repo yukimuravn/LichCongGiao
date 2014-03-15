@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "MusicInfoViewController.h"
 
-@interface MusicViewController : UIViewController
+@interface MusicViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *musicTableView;
 
 @end

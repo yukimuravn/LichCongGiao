@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ABCalendarPicker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>ABCalendarPickerAll.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ABCalendarPickerBundle.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>25DDA86B15AA22A80049B532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>25DDA87C15AA22A80049B532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>25DDA8D015AA29D40049B532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>25DDA8DA15AA2A380049B532</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

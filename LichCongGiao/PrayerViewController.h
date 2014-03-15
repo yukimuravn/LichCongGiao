@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "PrayerInfoViewController.h"
 
-@interface PrayerViewController : UIViewController
+@interface PrayerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *prayerTableView;
 
 @end

@@ -16,6 +16,7 @@
 #import "MusicViewController.h"
 #import "SettingViewController.h"
 #import "InfoViewController.h"
+#import "UIImage+Resize.h"
 
 @interface MenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

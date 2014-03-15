@@ -19,10 +19,10 @@
 	MenuViewController *menuViewController = [[MenuViewController alloc] init];
 	
 	UINavigationController *dateNavigationController = [[UINavigationController alloc] initWithRootViewController:dateViewController];
-//    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+    UINavigationController *menuNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
 	
-	SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:menuViewController frontViewController:dateNavigationController];
-    revealController.delegate = self;
+	SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:menuNavigationController frontViewController:dateNavigationController];
+    revealController.delegate = (id)self;
     
 //    RightViewController *rightViewController = rightViewController = [[RightViewController alloc] init];
 //    rightViewController.view.backgroundColor = [UIColor greenColor];

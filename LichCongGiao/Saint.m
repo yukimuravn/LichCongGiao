@@ -17,6 +17,7 @@
     if (self = [super init]){
 		self.name = saintName;
         self.image = [ImageManipulator makeRoundCornerImage:saintImage :saintImage.size.width/2 :saintImage.size.height/2];
+//        self.image = saintImage;
 	}
 	return self;
 }

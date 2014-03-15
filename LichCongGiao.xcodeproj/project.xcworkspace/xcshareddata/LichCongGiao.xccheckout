@@ -12,6 +12,8 @@
 	<dict>
 		<key>4DF9D2FA-7FF1-4F01-8ACD-9F8FF0280945</key>
 		<string>https://github.com/yukimuravn/LichCongGiao.git</string>
+		<key>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</key>
+		<string>https://github.com/k06a/ABCalendarPicker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LichCongGiao.xcodeproj/project.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>4DF9D2FA-7FF1-4F01-8ACD-9F8FF0280945</key>
 		<string>../..</string>
+		<key>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</key>
+		<string>../../../../GitHub/ABCalendarPicker</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/yukimuravn/LichCongGiao.git</string>
@@ -28,6 +32,14 @@
 	<string>4DF9D2FA-7FF1-4F01-8ACD-9F8FF0280945</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ABCalendarPicker</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE53BD44-12AA-44D7-AB35-1799C7799B66</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ABCalendarPicker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</key>
+		<string>https://github.com/k06a/ABCalendarPicker.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ABCalendarPicker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/k06a/ABCalendarPicker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CA6FD9CB-6FEB-469B-A863-39EEBB2D99D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ABCalendarPicker</string>
+		</dict>
+	</array>
+</dict>
+</plist>

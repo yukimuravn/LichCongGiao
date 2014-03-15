@@ -34,16 +34,34 @@
     
     menuArrayName = [NSMutableArray arrayWithObjects:@"Ngày", @"Tháng", @"Thánh", @"Kinh", @"Hát", @"Cài Đặt", @"Thông Tin", nil];
     
-//    [self.view setBackgroundColor:[UIColor colorWithRed:0.0f green:51/255.0f blue:102/255.0f alpha:1]];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor grayColor]];
+    
+    //Set Up TitleView
+    UIImage *img = [UIImage imageNamed:@"img0"];
+    UIImage *resizedImg = [UIImage imageWithImage:img scaledToSize:CGSizeMake(200, 30)];
+    UIImageView *imgView = [[UIImageView alloc]initWithImage:resizedImg];
+    if (IS_IOS_7){
+        [imgView setFrame:CGRectMake(20, 27, resizedImg.size.width, resizedImg.size.height)];
+    }
+    else {
+        [imgView setFrame:CGRectMake(20, 7, resizedImg.size.width, resizedImg.size.height)];
+    }
+    
+//    self.navigationItem.titleView = imgView;
+    [self.navigationController.view addSubview:imgView];
+    
+    //Set Up TableView
     if (!_menuTableView) {
         CGSize size = [[UIScreen mainScreen] bounds].size;
-        self.menuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, size.width, size.height) style:UITableViewStylePlain];
+        self.menuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, size.width, size.height-64) style:UITableViewStylePlain];
         self.menuTableView.dataSource = self;
         self.menuTableView.delegate = self;
         [self.menuTableView setBackgroundColor:[UIColor clearColor]];
         [self.menuTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+        [self.menuTableView setScrollEnabled:NO];
         [self.view addSubview:self.menuTableView];
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.menuTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     }
     
 }
@@ -88,14 +106,13 @@
     }
     
     cell.label.text = [menuArrayName objectAtIndex:indexPath.row];
-    cell.label.textColor = [UIColor grayColor];
+    cell.label.textColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu-cell-0%li",(long)indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     return cell;
 }
 
-#pragma mark - UITableViewDelegate
 // when user tap the row, what action you want to perform
 - (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -194,7 +211,7 @@
             break;
     }
     
-    [theTableView deselectRowAtIndexPath:indexPath animated:NO];
+//    [theTableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 

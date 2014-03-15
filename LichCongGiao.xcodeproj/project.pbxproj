@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02343318D209A10013356D /* SaintInfoViewController.m */; };
 		1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A02343418D209A10013356D /* SaintInfoViewController.xib */; };
+		1A8F684D18D2B9560059AA50 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F684C18D2B9560059AA50 /* UIImage+Resize.m */; };
+		1A8F685018D2C5CC0059AA50 /* UITextView+GetHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F684F18D2C5CC0059AA50 /* UITextView+GetHeight.m */; };
+		1A8F685418D3F7910059AA50 /* PrayerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F685218D3F7910059AA50 /* PrayerInfoViewController.m */; };
+		1A8F685518D3F7910059AA50 /* PrayerInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F685318D3F7910059AA50 /* PrayerInfoViewController.xib */; };
+		1A8F685A18D3FAF60059AA50 /* MusicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F685818D3FAF60059AA50 /* MusicInfoViewController.m */; };
+		1A8F685B18D3FAF60059AA50 /* MusicInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F685918D3FAF60059AA50 /* MusicInfoViewController.xib */; };
+		1A8F687518D408000059AA50 /* ABCalendarPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F687218D408000059AA50 /* ABCalendarPicker.framework */; };
 		1A92E2C718D0A38B003E9F97 /* Saint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A92E2C618D0A38B003E9F97 /* Saint.m */; };
 		1A92E2C918D0AA52003E9F97 /* search-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */; };
 		1AA5767C18CF5F22001D50C6 /* info-church@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AA5767B18CF5F22001D50C6 /* info-church@2x.png */; };
@@ -77,6 +84,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1A8F68CE18D408E40059AA50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DDA86C15AA22A80049B532;
+			remoteInfo = ABCalendarPicker;
+		};
+		1A8F68D018D408E40059AA50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DDA87D15AA22A80049B532;
+			remoteInfo = ABCalendarPickerTests;
+		};
+		1A8F68D218D408E40059AA50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25DDA8DB15AA2A380049B532;
+			remoteInfo = ABCalendarPickerBundle;
+		};
 		1ABC0F1818CE17650086484F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1ABC0EEA18CE17650086484F /* Project object */;
@@ -90,6 +118,18 @@
 		1A02343218D209A10013356D /* SaintInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaintInfoViewController.h; sourceTree = "<group>"; };
 		1A02343318D209A10013356D /* SaintInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaintInfoViewController.m; sourceTree = "<group>"; };
 		1A02343418D209A10013356D /* SaintInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaintInfoViewController.xib; sourceTree = "<group>"; };
+		1A8F684B18D2B9560059AA50 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		1A8F684C18D2B9560059AA50 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		1A8F684E18D2C5CC0059AA50 /* UITextView+GetHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+GetHeight.h"; sourceTree = "<group>"; };
+		1A8F684F18D2C5CC0059AA50 /* UITextView+GetHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+GetHeight.m"; sourceTree = "<group>"; };
+		1A8F685118D3F7910059AA50 /* PrayerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrayerInfoViewController.h; sourceTree = "<group>"; };
+		1A8F685218D3F7910059AA50 /* PrayerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrayerInfoViewController.m; sourceTree = "<group>"; };
+		1A8F685318D3F7910059AA50 /* PrayerInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrayerInfoViewController.xib; sourceTree = "<group>"; };
+		1A8F685718D3FAF60059AA50 /* MusicInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInfoViewController.h; sourceTree = "<group>"; };
+		1A8F685818D3FAF60059AA50 /* MusicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewController.m; sourceTree = "<group>"; };
+		1A8F685918D3FAF60059AA50 /* MusicInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewController.xib; sourceTree = "<group>"; };
+		1A8F687218D408000059AA50 /* ABCalendarPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABCalendarPicker.framework; path = LichCongGiao/ABCalendarPicker.framework; sourceTree = "<group>"; };
+		1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ABCalendarPicker.xcodeproj; path = LichCongGiao/ABCalendarPicker/ABCalendarPicker.xcodeproj; sourceTree = "<group>"; };
 		1A92E2C518D0A38B003E9F97 /* Saint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saint.h; sourceTree = "<group>"; };
 		1A92E2C618D0A38B003E9F97 /* Saint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saint.m; sourceTree = "<group>"; };
 		1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-icon@2x.png"; path = "Image/search-icon@2x.png"; sourceTree = "<group>"; };
@@ -182,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8F687518D408000059AA50 /* ABCalendarPicker.framework in Frameworks */,
 				1AD346BF18D1ED7100901758 /* QuartzCore.framework in Frameworks */,
 				1ABC0EF818CE17650086484F /* CoreGraphics.framework in Frameworks */,
 				1ABC0EFA18CE17650086484F /* UIKit.framework in Frameworks */,
@@ -202,28 +243,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A02343718D209AF0013356D /* SaintInfoViewController */ = {
+		1A02343718D209AF0013356D /* SaintInfo */ = {
 			isa = PBXGroup;
 			children = (
 				1A02343218D209A10013356D /* SaintInfoViewController.h */,
 				1A02343318D209A10013356D /* SaintInfoViewController.m */,
 				1A02343418D209A10013356D /* SaintInfoViewController.xib */,
 			);
-			name = SaintInfoViewController;
+			name = SaintInfo;
 			sourceTree = "<group>";
 		};
-		1A92E2CA18D0B24B003E9F97 /* Saint */ = {
+		1A8F685618D3F79E0059AA50 /* PrayerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1A8F685118D3F7910059AA50 /* PrayerInfoViewController.h */,
+				1A8F685218D3F7910059AA50 /* PrayerInfoViewController.m */,
+				1A8F685318D3F7910059AA50 /* PrayerInfoViewController.xib */,
+			);
+			name = PrayerInfo;
+			sourceTree = "<group>";
+		};
+		1A8F685C18D3FAFB0059AA50 /* MusicInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1A8F685718D3FAF60059AA50 /* MusicInfoViewController.h */,
+				1A8F685818D3FAF60059AA50 /* MusicInfoViewController.m */,
+				1A8F685918D3FAF60059AA50 /* MusicInfoViewController.xib */,
+			);
+			name = MusicInfo;
+			sourceTree = "<group>";
+		};
+		1A8F68C818D408E40059AA50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A8F68CF18D408E40059AA50 /* libABCalendarPicker.a */,
+				1A8F68D118D408E40059AA50 /* ABCalendarPickerTests.octest */,
+				1A8F68D318D408E40059AA50 /* ABCalendarPicker.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A92E2CA18D0B24B003E9F97 /* SaintObject */ = {
 			isa = PBXGroup;
 			children = (
 				1A92E2C518D0A38B003E9F97 /* Saint.h */,
 				1A92E2C618D0A38B003E9F97 /* Saint.m */,
 			);
-			name = Saint;
+			name = SaintObject;
 			sourceTree = "<group>";
 		};
 		1ABC0EE918CE17650086484F = {
 			isa = PBXGroup;
 			children = (
+				1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */,
 				1ABC0EFB18CE17650086484F /* LichCongGiao */,
 				1ABC0F1A18CE17650086484F /* LichCongGiaoTests */,
 				1ABC0EF418CE17650086484F /* Frameworks */,
@@ -243,6 +315,7 @@
 		1ABC0EF418CE17650086484F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A8F687218D408000059AA50 /* ABCalendarPicker.framework */,
 				1AD346BE18D1ED7100901758 /* QuartzCore.framework */,
 				1ABC0EF518CE17650086484F /* Foundation.framework */,
 				1ABC0EF718CE17650086484F /* CoreGraphics.framework */,
@@ -305,14 +378,15 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
-		1ABC0F3218CEB2230086484F /* DateViewController */ = {
+		1ABC0F3218CEB2230086484F /* Date */ = {
 			isa = PBXGroup;
 			children = (
+				1ABC0F4518CEBFD20086484F /* ImageViewController */,
 				1ABC0F2D18CEB1EF0086484F /* DateViewController.h */,
 				1ABC0F2E18CEB1EF0086484F /* DateViewController.m */,
 				1ABC0F2F18CEB1EF0086484F /* DateViewController.xib */,
 			);
-			name = DateViewController;
+			name = Date;
 			sourceTree = "<group>";
 		};
 		1ABC0F4418CEBFC80086484F /* Image */ = {
@@ -356,14 +430,14 @@
 			name = ImageViewController;
 			sourceTree = "<group>";
 		};
-		1ABC0F4B18CECB760086484F /* MenuViewController */ = {
+		1ABC0F4B18CECB760086484F /* Menu */ = {
 			isa = PBXGroup;
 			children = (
 				1ABC0F4618CECB730086484F /* MenuViewController.h */,
 				1ABC0F4718CECB730086484F /* MenuViewController.m */,
 				1ABC0F4818CECB730086484F /* MenuViewController.xib */,
 			);
-			name = MenuViewController;
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		1ABC0F6C18CF3DF00086484F /* MenuCell */ = {
@@ -376,30 +450,29 @@
 			name = MenuCell;
 			sourceTree = "<group>";
 		};
-		1ABC0F9E18CF49120086484F /* MonthViewController */ = {
+		1ABC0F9E18CF49120086484F /* Month */ = {
 			isa = PBXGroup;
 			children = (
 				1ABC0F9918CF490E0086484F /* MonthViewController.h */,
 				1ABC0F9A18CF490E0086484F /* MonthViewController.m */,
 				1ABC0F9B18CF490E0086484F /* MonthViewController.xib */,
 			);
-			name = MonthViewController;
+			name = Month;
 			sourceTree = "<group>";
 		};
 		1ABC0F9F18CF4BA30086484F /* MainClass */ = {
 			isa = PBXGroup;
 			children = (
-				1A02343718D209AF0013356D /* SaintInfoViewController */,
 				1A92E2CB18D0DD39003E9F97 /* Define.h */,
-				1ABC0F4B18CECB760086484F /* MenuViewController */,
+				1ABC0F4B18CECB760086484F /* Menu */,
 				1ABC0FA118CF4BBB0086484F /* SWRevealViewController */,
-				1ABC0F3218CEB2230086484F /* DateViewController */,
-				1ABC0F9E18CF49120086484F /* MonthViewController */,
-				1ABC0FA718CF4C5F0086484F /* SaintViewController */,
-				1ABC0FAD18CF4D6B0086484F /* PrayerViewController */,
-				1ABC0FB318CF4E110086484F /* MusicViewController */,
-				1ABC0FB918CF4E230086484F /* SettingViewController */,
-				1ABC0FBF18CF4E380086484F /* InfoViewController */,
+				1ABC0F3218CEB2230086484F /* Date */,
+				1ABC0F9E18CF49120086484F /* Month */,
+				1ABC0FA718CF4C5F0086484F /* Saint */,
+				1ABC0FAD18CF4D6B0086484F /* Prayer */,
+				1ABC0FB318CF4E110086484F /* Music */,
+				1ABC0FB918CF4E230086484F /* Setting */,
+				1ABC0FBF18CF4E380086484F /* Info */,
 			);
 			name = MainClass;
 			sourceTree = "<group>";
@@ -407,11 +480,10 @@
 		1ABC0FA018CF4BAE0086484F /* SubClass */ = {
 			isa = PBXGroup;
 			children = (
-				1ABC0F4518CEBFD20086484F /* ImageViewController */,
 				1ABC0F6C18CF3DF00086484F /* MenuCell */,
 				1ABC0FCA18CF58760086484F /* InfoCell */,
 				1AD4B75818D00E860043609E /* SaintCell */,
-				1A92E2CA18D0B24B003E9F97 /* Saint */,
+				1A92E2CA18D0B24B003E9F97 /* SaintObject */,
 			);
 			name = SubClass;
 			sourceTree = "<group>";
@@ -425,54 +497,57 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
-		1ABC0FA718CF4C5F0086484F /* SaintViewController */ = {
+		1ABC0FA718CF4C5F0086484F /* Saint */ = {
 			isa = PBXGroup;
 			children = (
+				1A02343718D209AF0013356D /* SaintInfo */,
 				1ABC0FA218CF4C5A0086484F /* SaintViewController.h */,
 				1ABC0FA318CF4C5A0086484F /* SaintViewController.m */,
 				1ABC0FA418CF4C5A0086484F /* SaintViewController.xib */,
 			);
-			name = SaintViewController;
+			name = Saint;
 			sourceTree = "<group>";
 		};
-		1ABC0FAD18CF4D6B0086484F /* PrayerViewController */ = {
+		1ABC0FAD18CF4D6B0086484F /* Prayer */ = {
 			isa = PBXGroup;
 			children = (
+				1A8F685618D3F79E0059AA50 /* PrayerInfo */,
 				1ABC0FA818CF4D660086484F /* PrayerViewController.h */,
 				1ABC0FA918CF4D660086484F /* PrayerViewController.m */,
 				1ABC0FAA18CF4D660086484F /* PrayerViewController.xib */,
 			);
-			name = PrayerViewController;
+			name = Prayer;
 			sourceTree = "<group>";
 		};
-		1ABC0FB318CF4E110086484F /* MusicViewController */ = {
+		1ABC0FB318CF4E110086484F /* Music */ = {
 			isa = PBXGroup;
 			children = (
 				1ABC0FAE18CF4E0E0086484F /* MusicViewController.h */,
 				1ABC0FAF18CF4E0E0086484F /* MusicViewController.m */,
 				1ABC0FB018CF4E0E0086484F /* MusicViewController.xib */,
+				1A8F685C18D3FAFB0059AA50 /* MusicInfo */,
 			);
-			name = MusicViewController;
+			name = Music;
 			sourceTree = "<group>";
 		};
-		1ABC0FB918CF4E230086484F /* SettingViewController */ = {
+		1ABC0FB918CF4E230086484F /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				1ABC0FB418CF4E1F0086484F /* SettingViewController.h */,
 				1ABC0FB518CF4E1F0086484F /* SettingViewController.m */,
 				1ABC0FB618CF4E1F0086484F /* SettingViewController.xib */,
 			);
-			name = SettingViewController;
+			name = Setting;
 			sourceTree = "<group>";
 		};
-		1ABC0FBF18CF4E380086484F /* InfoViewController */ = {
+		1ABC0FBF18CF4E380086484F /* Info */ = {
 			isa = PBXGroup;
 			children = (
 				1ABC0FBA18CF4E340086484F /* InfoViewController.h */,
 				1ABC0FBB18CF4E340086484F /* InfoViewController.m */,
 				1ABC0FBC18CF4E340086484F /* InfoViewController.xib */,
 			);
-			name = InfoViewController;
+			name = Info;
 			sourceTree = "<group>";
 		};
 		1ABC0FCA18CF58760086484F /* InfoCell */ = {
@@ -498,6 +573,10 @@
 			children = (
 				1AD346DA18D1FD0E00901758 /* ImageManipulator.h */,
 				1AD346DB18D1FD0E00901758 /* ImageManipulator.m */,
+				1A8F684B18D2B9560059AA50 /* UIImage+Resize.h */,
+				1A8F684C18D2B9560059AA50 /* UIImage+Resize.m */,
+				1A8F684E18D2C5CC0059AA50 /* UITextView+GetHeight.h */,
+				1A8F684F18D2C5CC0059AA50 /* UITextView+GetHeight.m */,
 			);
 			name = UIImage;
 			sourceTree = "<group>";
@@ -576,6 +655,12 @@
 			mainGroup = 1ABC0EE918CE17650086484F;
 			productRefGroup = 1ABC0EF318CE17650086484F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1A8F68C818D408E40059AA50 /* Products */;
+					ProjectRef = 1A8F68C718D408E40059AA50 /* ABCalendarPicker.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1ABC0EF118CE17650086484F /* LichCongGiao */,
@@ -583,6 +668,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1A8F68CF18D408E40059AA50 /* libABCalendarPicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libABCalendarPicker.a;
+			remoteRef = 1A8F68CE18D408E40059AA50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1A8F68D118D408E40059AA50 /* ABCalendarPickerTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ABCalendarPickerTests.octest;
+			remoteRef = 1A8F68D018D408E40059AA50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1A8F68D318D408E40059AA50 /* ABCalendarPicker.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ABCalendarPicker.bundle;
+			remoteRef = 1A8F68D218D408E40059AA50 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1ABC0EF018CE17650086484F /* Resources */ = {
@@ -623,7 +732,9 @@
 				1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */,
 				1ABC0F6218CF02D50086484F /* img4@2x~iphone.png in Resources */,
 				1ABC0F6018CF02D50086484F /* img2@2x~iphone.png in Resources */,
+				1A8F685B18D3FAF60059AA50 /* MusicInfoViewController.xib in Resources */,
 				1ABC0F9218CF458E0086484F /* menu-cell-00@2x.png in Resources */,
+				1A8F685518D3F7910059AA50 /* PrayerInfoViewController.xib in Resources */,
 				1ABC0FBE18CF4E340086484F /* InfoViewController.xib in Resources */,
 				1A92E2C918D0AA52003E9F97 /* search-icon@2x.png in Resources */,
 				1ABC0FD118CF5BF80086484F /* info-fb@2x.png in Resources */,
@@ -649,14 +760,18 @@
 			files = (
 				1AD4B75718D00E820043609E /* SaintCell.m in Sources */,
 				1A92E2C718D0A38B003E9F97 /* Saint.m in Sources */,
+				1A8F685A18D3FAF60059AA50 /* MusicInfoViewController.m in Sources */,
 				1ABC0F3018CEB1EF0086484F /* DateViewController.m in Sources */,
 				1ABC0FA518CF4C5A0086484F /* SaintViewController.m in Sources */,
 				1ABC0F6B18CF3DEA0086484F /* MenuCell.m in Sources */,
+				1A8F684D18D2B9560059AA50 /* UIImage+Resize.m in Sources */,
 				1ABC0FAB18CF4D660086484F /* PrayerViewController.m in Sources */,
+				1A8F685018D2C5CC0059AA50 /* UITextView+GetHeight.m in Sources */,
 				1ABC0F0218CE17650086484F /* main.m in Sources */,
 				1ABC0FC918CF58720086484F /* InfoCell.m in Sources */,
 				1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */,
 				1ABC0F3618CEBFA30086484F /* ImageViewController.m in Sources */,
+				1A8F685418D3F7910059AA50 /* PrayerInfoViewController.m in Sources */,
 				1ABC0F0618CE17650086484F /* HomeAppDelegate.m in Sources */,
 				1ABC0FBD18CF4E340086484F /* InfoViewController.m in Sources */,
 				1ABC0F9C18CF490E0086484F /* MonthViewController.m in Sources */,
@@ -749,6 +864,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -782,6 +898,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -792,10 +909,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LichCongGiao/LichCongGiao-Prefix.pch";
 				INFOPLIST_FILE = "LichCongGiao/LichCongGiao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -806,10 +931,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LichCongGiao/LichCongGiao-Prefix.pch";
 				INFOPLIST_FILE = "LichCongGiao/LichCongGiao-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

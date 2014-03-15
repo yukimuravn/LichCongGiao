@@ -143,7 +143,6 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%i",indexPath.row);
     Saint *saint = [saintArray objectAtIndex:indexPath.row];
     SaintInfoViewController *saintInfoVC = [[SaintInfoViewController alloc]initWithNibName:@"SaintInfoViewController" bundle:nil];
     saintInfoVC.saintName = saint.name;

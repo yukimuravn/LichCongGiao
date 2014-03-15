@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import "Define.h"
+#import "ImageManipulator.h"
+#import "UIImage+Resize.h"
+#import "UITextView+GetHeight.h"
 
 @interface SaintInfoViewController : UIViewController
 
