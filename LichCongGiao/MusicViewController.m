@@ -9,11 +9,16 @@
 #import "MusicViewController.h"
 
 @interface MusicViewController ()
+{
+    SongInfo *fetchedSongInfo;
+}
 
 @end
 
 @implementation MusicViewController
 @synthesize musicTableView = _musicTableView;
+@synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize managedObjectContext = _managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,7 +54,43 @@
         self.musicTableView.delegate = self;
         [self.view addSubview:self.musicTableView];
     }
+    
+    //Set CoreData SongInfo
+    self.managedObjectContext = [self managedObjectContext];
+    for (int i = 0; i < 15; i++) {
+        SongInfo *songInfo = [NSEntityDescription insertNewObjectForEntityForName:@"SongInfo" inManagedObjectContext:self.managedObjectContext];
+        songInfo.song_id = [NSNumber numberWithInt:i];
+        songInfo.name = [NSString stringWithFormat:@"Bài Hát %@",songInfo.song_id];
+        songInfo.author = [NSString stringWithFormat:@"Tác Giả %@",songInfo.song_id];
+        songInfo.lyric = @"Yukimura Imba";
+    }
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
 
+//    // Test listing all FailedBankInfos from the store
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SongInfo"
+//                                              inManagedObjectContext:context];
+//    [fetchRequest setEntity:entity];
+//    NSError *error;
+//    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+//    fetchedSongInfo = [fetchedObjects objectAtIndex:0];
+    NSError *fetchError;
+	if (![[self fetchedResultsController] performFetch:&fetchError]) {
+		// Update to handle the error appropriately.
+		NSLog(@"Unresolved error %@, %@", fetchError, [fetchError userInfo]);
+		exit(-1);  // Fail
+	}
+
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+//    self.fetchedResultsController = nil;
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,20 +111,37 @@
 
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section
 {
-    return 15;
+//    return 15;
+    id  sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+//    // Test listing all FailedBankInfos from the store
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"SongInfo"
+//                                              inManagedObjectContext:self.managedObjectContext];
+//    [fetchRequest setEntity:entity];
+//    NSError *error;
+//    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+//    fetchedSongInfo = [fetchedObjects objectAtIndex:0];
+
+    fetchedSongInfo = [_fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = fetchedSongInfo.name;
+    cell.detailTextLabel.text = fetchedSongInfo.author;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"musicCell";
-    
     // Default UITableViewCell
+    static NSString *cellIdentifier = @"musicCell";
     UITableViewCell *cell = (UITableViewCell *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Bài Hát 0%i",indexPath.row];
-    cell.detailTextLabel.text = @"123";
+    [self configureCell:cell atIndexPath:indexPath];
+//    cell.textLabel.text = fetchedSongInfo.name; //[NSString stringWithFormat:@"Bài Hát 0%i",indexPath.row];
+//    cell.detailTextLabel.text = fetchedSongInfo.author; //@"123";
     //
     //    MenuCell *cell = (MenuCell *)[theTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     //    if (cell == nil)
@@ -112,6 +170,99 @@
     self.navigationItem.backBarButtonItem = backButton;
     [self.navigationController pushViewController:musicInfoVC animated:YES];
     [theTableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+#pragma mark -
+#pragma mark - CoreData Methods
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"SongInfo" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                              initWithKey:@"song_id" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSFetchedResultsController *theFetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                        managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil
+                                                   cacheName:@"cache_musicVC"];
+    self.fetchedResultsController = theFetchedResultsController;
+    _fetchedResultsController.delegate = (id)self;
+    
+    return _fetchedResultsController;
+    
+}
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self.musicTableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.musicTableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray
+                                               arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [self.musicTableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.musicTableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.musicTableView endUpdates];
 }
 
 

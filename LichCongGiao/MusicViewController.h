@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "MusicInfoViewController.h"
+#import "SongInfo.h"
 
 @interface MusicViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *musicTableView;
+@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end

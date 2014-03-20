@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Tháng";
-    [self.view setBackgroundColor:[UIColor yellowColor]];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     
     //Set Up MenuButton
     SWRevealViewController *revealController = [self revealViewController];
@@ -39,7 +39,22 @@
     [menuBtn addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithCustomView:menuBtn];
     self.navigationItem.leftBarButtonItem = menu_btn;
-
+    
+    //Set Up ABCalendarPicker
+    self.calendarPicker.delegate = self;
+    self.calendarPicker.dataSource = self;
+    self.calendarPicker.calendar.firstWeekday = 2;
+    [self.calendarPicker updateStateAnimated:NO];
+    [self.view addSubview:self.calendarShadow];
+    [self calendarPicker:self.calendarPicker animateNewHeight:self.calendarPicker.bounds.size.height];
+    
+//    if (self.calendarPicker.styleProvider == nil) {
+//        NSLog(@"NO STYLE");
+//    }
+//    else {
+//        NSLog(@"STYLE");
+//        [self.calendarPicker.styleProvider setTextColor:[UIColor redColor]];
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,5 +62,52 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSArray *)eventsForDate:(NSDate *)date
+{
+    NSDateComponents * componentsBegin = [self.calendarPicker.calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
+    NSDateComponents * componentsDay = [[NSDateComponents alloc] init];
+    componentsDay.day = 1;
+    
+    NSDate * dayBegin = [self.calendarPicker.calendar dateFromComponents:componentsBegin];
+    NSDate * dayEnd = [self.calendarPicker.calendar dateByAddingComponents:componentsDay toDate:dayBegin options:0];
+    
+    NSPredicate * predicate = [self.store predicateForEventsWithStartDate:dayBegin endDate:dayEnd calendars:nil];
+    return [self.store eventsMatchingPredicate:predicate];
+}
+
+- (UIImageView*)calendarShadow
+{
+    if (_calendarShadow == nil)
+    {
+        _calendarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CalendarShadow"]];
+        _calendarShadow.opaque = NO;
+    }
+    return _calendarShadow;
+}
+
+#pragma mark - ABCalendarPicker delegate and dataSource
+
+- (void)calendarPicker:(ABCalendarPicker *)calendarPicker
+      animateNewHeight:(CGFloat)height
+{
+    self.calendarShadow.frame = CGRectMake(0,CGRectGetMaxY(self.calendarPicker.frame),
+                                           self.calendarPicker.frame.size.width,
+                                           self.calendarShadow.frame.size.height);
+}
+
+- (NSInteger)calendarPicker:(ABCalendarPicker*)calendarPicker
+      numberOfEventsForDate:(NSDate*)date
+                    onState:(ABCalendarPickerState)state
+{
+    if (state != ABCalendarPickerStateDays
+        && state != ABCalendarPickerStateWeekdays)
+    {
+        return 0;
+    }
+    
+    return [[self eventsForDate:date] count];
+}
+
 
 @end

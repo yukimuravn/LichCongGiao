@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import <EventKit/EventKit.h>
+#import <ABCalendarPicker/ABCalendarPicker.h>
 
-@interface MonthViewController : UIViewController
+@interface MonthViewController : UIViewController <ABCalendarPickerDelegateProtocol, ABCalendarPickerDataSourceProtocol>
+
+@property (nonatomic, assign) IBOutlet ABCalendarPicker *calendarPicker;
+@property (nonatomic, strong) UIImageView *calendarShadow;
+
+@property (nonatomic) EKEventStore *store;
 
 @end

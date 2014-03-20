@@ -39,7 +39,22 @@
     [menuBtn addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *menu_btn = [[UIBarButtonItem alloc]initWithCustomView:menuBtn];
     self.navigationItem.leftBarButtonItem = menu_btn;
+    
+    //Set Up SearchButton
+    UIImage *searchIcon = [UIImage imageNamed:@"search-icon"];
+    UIButton *searchBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, searchIcon.size.width, searchIcon.size.height)];
+    [searchBtn setBackgroundImage:searchIcon forState:UIControlStateNormal];
+    [searchBtn setShowsTouchWhenHighlighted:YES];
+    [searchBtn addTarget:self action:@selector(pushCoreDateVC) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *search_btn = [[UIBarButtonItem alloc]initWithCustomView:searchBtn];
+    self.navigationItem.rightBarButtonItem = search_btn;
 
+}
+
+- (void)pushCoreDateVC
+{
+    CoreDataViewController *coreDataVC = [[CoreDataViewController alloc]initWithNibName:@"CoreDataViewController" bundle:nil];
+    [self.navigationController pushViewController:coreDataVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

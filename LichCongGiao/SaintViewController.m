@@ -32,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Thánh";
-    [self.view setBackgroundColor:[UIColor magentaColor]];
+    [self.view setBackgroundColor:[UIColor clearColor]];
     
     if (IS_IOS_7){
         self.automaticallyAdjustsScrollViewInsets = NO;
@@ -67,7 +67,6 @@
     
     //Set Up UICollectionView
     CGSize size = [[UIScreen mainScreen] bounds].size;
-    NSLog(@"%@",NSStringFromCGSize(size));
     if (!_saintCollectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         [flowLayout setItemSize:CGSizeMake(80, 100)];
@@ -93,8 +92,7 @@
 
 - (void)reloadDataUICollectionView
 {
-    [saintArray removeLastObject];
-    NSLog(@"%i", [saintArray count]);
+//    [saintArray removeLastObject];
     [self.saintCollectionView reloadData];
 }
 
