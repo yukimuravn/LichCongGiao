@@ -4,9 +4,9 @@
         <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lyric" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="song_id" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="songid" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SongInfo" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="SongInfo" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

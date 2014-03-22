@@ -35,6 +35,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     revealController.panGestureRecognizer.enabled = NO;
     revealController.tapGestureRecognizer.enabled = NO;
+    revealController = nil;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -42,6 +43,7 @@
     SWRevealViewController *revealController = [self revealViewController];
     revealController.panGestureRecognizer.enabled = YES;
     revealController.tapGestureRecognizer.enabled = YES;
+    revealController = nil;
     [super viewWillDisappear:animated];
 }
 

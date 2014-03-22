@@ -14,7 +14,6 @@
 		1A3CD96718D9DEB8001EFA3F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3CD96618D9DEB8001EFA3F /* CoreData.framework */; };
 		1A3CD97918D9F001001EFA3F /* LichCongGiaoCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CD97718D9F001001EFA3F /* LichCongGiaoCoreData.xcdatamodeld */; };
 		1A3CD97C18D9F439001EFA3F /* SongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CD97B18D9F439001EFA3F /* SongInfo.m */; };
-		1A3CD97D18DA0BB6001EFA3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0F0718CE17650086484F /* Main.storyboard */; };
 		1A8F684D18D2B9560059AA50 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F684C18D2B9560059AA50 /* UIImage+Resize.m */; };
 		1A8F685018D2C5CC0059AA50 /* UITextView+GetHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F684F18D2C5CC0059AA50 /* UITextView+GetHeight.m */; };
 		1A8F685418D3F7910059AA50 /* PrayerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F685218D3F7910059AA50 /* PrayerInfoViewController.m */; };
@@ -22,7 +21,6 @@
 		1A8F685A18D3FAF60059AA50 /* MusicInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8F685818D3FAF60059AA50 /* MusicInfoViewController.m */; };
 		1A8F685B18D3FAF60059AA50 /* MusicInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F685918D3FAF60059AA50 /* MusicInfoViewController.xib */; };
 		1A8F68E418D471130059AA50 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F68E318D471130059AA50 /* EventKit.framework */; };
-		1A8F690A18D5491A0059AA50 /* ABCalendarPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8F690918D5491A0059AA50 /* ABCalendarPicker.framework */; };
 		1A8F690C18D5494C0059AA50 /* ABCalendarPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A8F690B18D5494C0059AA50 /* ABCalendarPicker.bundle */; };
 		1A92E2C718D0A38B003E9F97 /* Saint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A92E2C618D0A38B003E9F97 /* Saint.m */; };
 		1A92E2C918D0AA52003E9F97 /* search-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */; };
@@ -84,6 +82,10 @@
 		1ABC0FD218CF5BF80086484F /* info-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */; };
 		1ABC0FD318CF5BF80086484F /* info-www@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCF18CF5BF80086484F /* info-www@2x.png */; };
 		1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */; };
+		1ABDF11918DB4CBC0009311B /* ABCalendarPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */; };
+		1ABDF11C18DB5AD00009311B /* Songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF11B18DB5AD00009311B /* Songs.json */; };
+		1ABDF11E18DB5BA10009311B /* Song.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF11D18DB5BA10009311B /* Song.json */; };
+		1ABDF11F18DB5D390009311B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0F0718CE17650086484F /* Main.storyboard */; };
 		1AD346BF18D1ED7100901758 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD346BE18D1ED7100901758 /* QuartzCore.framework */; };
 		1AD346DC18D1FD0E00901758 /* ImageManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD346DB18D1FD0E00901758 /* ImageManipulator.m */; };
 		1AD4B75718D00E820043609E /* SaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD4B75618D00E820043609E /* SaintCell.m */; };
@@ -122,7 +124,6 @@
 		1A8F685818D3FAF60059AA50 /* MusicInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInfoViewController.m; sourceTree = "<group>"; };
 		1A8F685918D3FAF60059AA50 /* MusicInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicInfoViewController.xib; sourceTree = "<group>"; };
 		1A8F68E318D471130059AA50 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		1A8F690918D5491A0059AA50 /* ABCalendarPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABCalendarPicker.framework; path = "../../Desktop/Debug-iphoneos/ABCalendarPicker.framework"; sourceTree = "<group>"; };
 		1A8F690B18D5494C0059AA50 /* ABCalendarPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ABCalendarPicker.bundle; sourceTree = "<group>"; };
 		1A92E2C518D0A38B003E9F97 /* Saint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Saint.h; sourceTree = "<group>"; };
 		1A92E2C618D0A38B003E9F97 /* Saint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Saint.m; sourceTree = "<group>"; };
@@ -203,6 +204,9 @@
 		1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-twitter@2x.png"; path = "Image/info-twitter@2x.png"; sourceTree = "<group>"; };
 		1ABC0FCF18CF5BF80086484F /* info-www@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-www@2x.png"; path = "Image/info-www@2x.png"; sourceTree = "<group>"; };
 		1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-yukimura@2x.png"; path = "Image/info-yukimura@2x.png"; sourceTree = "<group>"; };
+		1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABCalendarPicker.framework; sourceTree = "<group>"; };
+		1ABDF11B18DB5AD00009311B /* Songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Songs.json; sourceTree = "<group>"; };
+		1ABDF11D18DB5BA10009311B /* Song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Song.json; sourceTree = "<group>"; };
 		1AD346BE18D1ED7100901758 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1AD346DA18D1FD0E00901758 /* ImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManipulator.h; sourceTree = "<group>"; };
 		1AD346DB18D1FD0E00901758 /* ImageManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManipulator.m; sourceTree = "<group>"; };
@@ -216,8 +220,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABDF11918DB4CBC0009311B /* ABCalendarPicker.framework in Frameworks */,
 				1A3CD96718D9DEB8001EFA3F /* CoreData.framework in Frameworks */,
-				1A8F690A18D5491A0059AA50 /* ABCalendarPicker.framework in Frameworks */,
 				1A8F68E418D471130059AA50 /* EventKit.framework in Frameworks */,
 				1AD346BF18D1ED7100901758 /* QuartzCore.framework in Frameworks */,
 				1ABC0EF818CE17650086484F /* CoreGraphics.framework in Frameworks */,
@@ -293,6 +297,8 @@
 		1ABC0EE918CE17650086484F = {
 			isa = PBXGroup;
 			children = (
+				1ABDF11D18DB5BA10009311B /* Song.json */,
+				1ABDF11B18DB5AD00009311B /* Songs.json */,
 				1A8F690B18D5494C0059AA50 /* ABCalendarPicker.bundle */,
 				1ABC0EFB18CE17650086484F /* LichCongGiao */,
 				1ABC0F1A18CE17650086484F /* LichCongGiaoTests */,
@@ -313,8 +319,8 @@
 		1ABC0EF418CE17650086484F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */,
 				1A3CD96618D9DEB8001EFA3F /* CoreData.framework */,
-				1A8F690918D5491A0059AA50 /* ABCalendarPicker.framework */,
 				1A8F68E318D471130059AA50 /* EventKit.framework */,
 				1AD346BE18D1ED7100901758 /* QuartzCore.framework */,
 				1ABC0EF518CE17650086484F /* Foundation.framework */,
@@ -670,7 +676,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A3CD97D18DA0BB6001EFA3F /* Main.storyboard in Resources */,
+				1ABDF11F18DB5D390009311B /* Main.storyboard in Resources */,
 				1A8F690C18D5494C0059AA50 /* ABCalendarPicker.bundle in Resources */,
 				1ABC0F9518CF458E0086484F /* menu-cell-03@2x.png in Resources */,
 				1ABC0FAC18CF4D660086484F /* PrayerViewController.xib in Resources */,
@@ -690,6 +696,7 @@
 				1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */,
 				1ABC0F5E18CF02D50086484F /* img0@2x~iphone.png in Resources */,
 				1ABC0F3118CEB1EF0086484F /* DateViewController.xib in Resources */,
+				1ABDF11E18DB5BA10009311B /* Song.json in Resources */,
 				1ABC0FC418CF51F60086484F /* AppIcon58@2x.png in Resources */,
 				1ABC0F0E18CE17650086484F /* Images.xcassets in Resources */,
 				1ABC0F0018CE17650086484F /* InfoPlist.strings in Resources */,
@@ -704,6 +711,7 @@
 				1ABC0F9718CF458E0086484F /* menu-cell-05@2x.png in Resources */,
 				1ABC0F6E18CF3DFD0086484F /* MenuCell.xib in Resources */,
 				1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */,
+				1ABDF11C18DB5AD00009311B /* Songs.json in Resources */,
 				1ABC0F6218CF02D50086484F /* img4@2x~iphone.png in Resources */,
 				1ABC0F6018CF02D50086484F /* img2@2x~iphone.png in Resources */,
 				1A8F685B18D3FAF60059AA50 /* MusicInfoViewController.xib in Resources */,
@@ -889,7 +897,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
-					"/Users/Yukimura/Desktop/Debug-iphoneos",
+					/Users/Yukimura/XCode/LichCongGiao,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LichCongGiao/LichCongGiao-Prefix.pch";
@@ -912,7 +920,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Yukimura/XCode/LichCongGiao/LichCongGiao,
-					"/Users/Yukimura/Desktop/Debug-iphoneos",
+					/Users/Yukimura/XCode/LichCongGiao,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LichCongGiao/LichCongGiao-Prefix.pch";

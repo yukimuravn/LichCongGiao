@@ -12,7 +12,7 @@
 
 @interface SongInfo : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * song_id;
+@property (nonatomic, retain) NSNumber * songid;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * lyric;
 @property (nonatomic, retain) NSString * author;

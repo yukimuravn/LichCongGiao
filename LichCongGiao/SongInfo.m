@@ -11,7 +11,7 @@
 
 @implementation SongInfo
 
-@dynamic song_id;
+@dynamic songid;
 @dynamic name;
 @dynamic lyric;
 @dynamic author;

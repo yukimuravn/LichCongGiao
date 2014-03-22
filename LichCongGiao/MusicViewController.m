@@ -55,15 +55,15 @@
         [self.view addSubview:self.musicTableView];
     }
     
-    //Set CoreData SongInfo
+    //Init CoreData SongInfo
     self.managedObjectContext = [self managedObjectContext];
-    for (int i = 0; i < 15; i++) {
-        SongInfo *songInfo = [NSEntityDescription insertNewObjectForEntityForName:@"SongInfo" inManagedObjectContext:self.managedObjectContext];
-        songInfo.song_id = [NSNumber numberWithInt:i];
-        songInfo.name = [NSString stringWithFormat:@"Bài Hát %@",songInfo.song_id];
-        songInfo.author = [NSString stringWithFormat:@"Tác Giả %@",songInfo.song_id];
-        songInfo.lyric = @"Yukimura Imba";
-    }
+//    for (int i = 0; i < 15; i++) {
+//        SongInfo *songInfo = [NSEntityDescription insertNewObjectForEntityForName:@"SongInfo" inManagedObjectContext:self.managedObjectContext];
+//        songInfo.songid = [NSNumber numberWithInt:i];
+//        songInfo.name = [NSString stringWithFormat:@"Bài Hát %@",songInfo.songid];
+//        songInfo.author = [NSString stringWithFormat:@"Tác Giả %@",songInfo.songid];
+//        songInfo.lyric = @"Yukimura Imba";
+//    }
     
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
@@ -84,18 +84,37 @@
 		NSLog(@"Unresolved error %@, %@", fetchError, [fetchError userInfo]);
 		exit(-1);  // Fail
 	}
-
+    
+    //Set JSON Data
+    NSError *err;
+    NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"Song" ofType:@"json"];
+    NSArray* songs = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
+                                                     options:kNilOptions
+                                                       error:&err];
+    //Add JSON Data to CoreData
+    for (int i = 0; i < [songs count]; i++) {
+        NSDictionary *songDict = [songs objectAtIndex:i];
+        NSString *author = [songDict valueForKey:@"author"];
+        NSString *name = [songDict valueForKey:@"name"];
+        NSNumber *songid = [songDict valueForKey:@"songid"];
+        NSString *lyric = [songDict valueForKey:@"lyric"];
+        SongInfo *songInfo = [NSEntityDescription insertNewObjectForEntityForName:@"SongInfo" inManagedObjectContext:self.managedObjectContext];
+        songInfo.songid = songid;
+        songInfo.name = name;
+        songInfo.author = author;
+        songInfo.lyric = lyric;
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-//    self.fetchedResultsController = nil;
     [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    self.fetchedResultsController = nil;
     // Dispose of any resources that can be recreated.
 }
 
@@ -195,7 +214,7 @@
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"song_id" ascending:YES];
+                              initWithKey:@"songid" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
     
     [fetchRequest setFetchBatchSize:20];
