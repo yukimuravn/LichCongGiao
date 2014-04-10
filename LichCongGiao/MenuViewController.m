@@ -34,10 +34,10 @@
     
     menuArrayName = [NSMutableArray arrayWithObjects:@"Ngày", @"Tháng", @"Thánh", @"Kinh", @"Hát", @"Cài Đặt", @"Thông Tin", nil];
     
-    [self.view setBackgroundColor:[UIColor grayColor]];
+    [self.view setBackgroundColor:[UIColor myGreenColor]];
     
     //Set Up TitleView
-    UIImage *img = [UIImage imageNamed:@"img0"];
+    UIImage *img = [UIImage imageNamed:@"titleview"];
     UIImage *resizedImg = [UIImage imageWithImage:img scaledToSize:CGSizeMake(200, 30)];
     UIImageView *imgView = [[UIImageView alloc]initWithImage:resizedImg];
     if (IS_IOS_7){
@@ -56,7 +56,7 @@
         self.menuTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, size.width, size.height-64) style:UITableViewStylePlain];
         self.menuTableView.dataSource = self;
         self.menuTableView.delegate = self;
-        [self.menuTableView setBackgroundColor:[UIColor clearColor]];
+        [self.menuTableView setBackgroundColor:[UIColor myGreenColor]];
         [self.menuTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
         [self.menuTableView setScrollEnabled:NO];
         [self.view addSubview:self.menuTableView];
@@ -87,6 +87,12 @@
     return 7;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIImageView *bgView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"selectedCellBg"]];
+    cell.selectedBackgroundView = bgView;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"menuCell";
@@ -107,9 +113,10 @@
     
     cell.label.text = [menuArrayName objectAtIndex:indexPath.row];
     cell.label.textColor = [UIColor whiteColor];
+    cell.label.font = [UIFont fontWithName:@"AvenirNext-Medium" size:18.0];
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"menu-cell-0%li",(long)indexPath.row]];
     cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+//    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     return cell;
 }
 

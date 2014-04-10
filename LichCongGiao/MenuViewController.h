@@ -17,6 +17,7 @@
 #import "SettingViewController.h"
 #import "InfoViewController.h"
 #import "UIImage+Resize.h"
+#import "UIColor+MyColor.h"
 
 @interface MenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

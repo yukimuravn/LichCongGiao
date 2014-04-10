@@ -10,6 +10,8 @@
 #import "SWRevealViewController.h"
 #import "DateViewController.h"
 #import "MenuViewController.h"
+#import "UIColor+MyColor.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @class SWRevealViewController;
 

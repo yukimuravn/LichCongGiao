@@ -10,8 +10,9 @@
 #import "SWRevealViewController.h"
 #import "InfoCell.h"
 #import "Define.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface InfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface InfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, FBLoginViewDelegate>
 
 @property (nonatomic, strong) UITableView *infoTableView;
 

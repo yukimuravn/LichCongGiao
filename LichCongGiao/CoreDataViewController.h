@@ -10,8 +10,8 @@
 
 @interface CoreDataViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) IBOutlet UITextField *nameTextField;
-@property (nonatomic, strong) IBOutlet UITextField *authorTextField;
-@property (nonatomic, strong) IBOutlet UITextField *lyricTextField;
+@property (nonatomic, weak) IBOutlet UITextField *nameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *authorTextField;
+@property (nonatomic, weak) IBOutlet UITextField *lyricTextField;
 
 @end

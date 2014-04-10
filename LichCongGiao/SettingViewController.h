@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
 #import "CoreDataViewController.h"
+#import "Define.h"
+#import "UIView+Animation.h"
 
-@interface SettingViewController : UIViewController
+@interface SettingViewController : UIViewController <UICollisionBehaviorDelegate>
+
+@property (nonatomic, strong) UIImageView *animationImg;
+@property (nonatomic, strong) UIView *myBall;
+@property (nonatomic, strong) UIDynamicAnimator *myDynamicAnimator;
+@property (nonatomic) BOOL isBallRolling;
 
 @end

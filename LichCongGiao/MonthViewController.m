@@ -47,7 +47,6 @@
     [self.calendarPicker updateStateAnimated:NO];
     [self.view addSubview:self.calendarShadow];
     [self calendarPicker:self.calendarPicker animateNewHeight:self.calendarPicker.bounds.size.height];
-    
 //    if (self.calendarPicker.styleProvider == nil) {
 //        NSLog(@"NO STYLE");
 //    }
@@ -62,7 +61,7 @@
     [super viewWillAppear:animated];
     SWRevealViewController *revealController = [self revealViewController];
     revealController.panGestureRecognizer.enabled = NO;
-    revealController.tapGestureRecognizer.enabled = NO;
+//    revealController.tapGestureRecognizer.enabled = NO;
     revealController = nil;
 }
 
@@ -70,7 +69,7 @@
 {
     SWRevealViewController *revealController = [self revealViewController];
     revealController.panGestureRecognizer.enabled = YES;
-    revealController.tapGestureRecognizer.enabled = YES;
+//    revealController.tapGestureRecognizer.enabled = YES;
     revealController = nil;
     [super viewWillDisappear:animated];
 }

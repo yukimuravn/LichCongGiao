@@ -186,6 +186,7 @@
     MusicInfoViewController *musicInfoVC = [[MusicInfoViewController alloc]initWithNibName:@"MusicInfoViewController" bundle:nil];
     musicInfoVC.title = cellTitle;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Trở Lại" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [backButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor],  UITextAttributeTextColor,nil] forState:UIControlStateNormal];
     self.navigationItem.backBarButtonItem = backButton;
     [self.navigationController pushViewController:musicInfoVC animated:YES];
     [theTableView deselectRowAtIndexPath:indexPath animated:NO];

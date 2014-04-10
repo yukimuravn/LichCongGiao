@@ -35,12 +35,29 @@
     //revealController.bounceBackOnOverdraw=NO;
     //revealController.stableDragOnOverdraw=YES;
     
+    [FBProfilePictureView class];
+    
 	self.viewController = revealController;
-	
 	self.window.rootViewController = self.viewController;
+    
+    [self customizeNavigationBar];
+    
 	[self.window makeKeyAndVisible];
 	return YES;
 
+}
+#pragma mark - FB Delegate
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+    BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // You can add your app-specific url handling code here if needed
+    
+    return wasHandled;
 }
 
 #pragma mark - SWRevealViewDelegate
@@ -102,6 +119,27 @@
             abort();
         }
     }
+}
+
+#pragma mark - Customize UINavigationBar
+- (void)customizeNavigationBar
+{
+    UIColor *color = [UIColor myGreenColor];
+    if (IS_IOS_7) {
+        [[UINavigationBar appearance] setBarTintColor:color];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    }
+    else {
+        [[UINavigationBar appearance] setTintColor:color];
+    }
+    
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+//    shadow.shadowOffset = CGSizeMake(0, 1);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                           nil, NSShadowAttributeName,
+                                                           [UIFont fontWithName:@"AvenirNext-Medium" size:21.0], NSFontAttributeName, nil]];
 }
 
 #pragma mark - Core Data stack

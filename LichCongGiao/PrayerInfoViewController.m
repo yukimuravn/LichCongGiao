@@ -29,6 +29,23 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    SWRevealViewController *revealController = [self revealViewController];
+    revealController.panGestureRecognizer.enabled = NO;
+    revealController = nil;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    SWRevealViewController *revealController = [self revealViewController];
+    revealController.panGestureRecognizer.enabled = YES;
+    revealController = nil;
+    [super viewWillDisappear:animated];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

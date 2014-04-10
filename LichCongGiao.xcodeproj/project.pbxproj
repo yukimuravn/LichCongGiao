@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A02343318D209A10013356D /* SaintInfoViewController.m */; };
 		1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A02343418D209A10013356D /* SaintInfoViewController.xib */; };
+		1A02806218F3DAF500CBC99A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A02806118F3DAF500CBC99A /* FacebookSDK.framework */; };
 		1A3CD96318D9DC42001EFA3F /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3CD96118D9DC42001EFA3F /* CoreDataViewController.m */; };
 		1A3CD96418D9DC42001EFA3F /* CoreDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3CD96218D9DC42001EFA3F /* CoreDataViewController.xib */; };
 		1A3CD96718D9DEB8001EFA3F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3CD96618D9DEB8001EFA3F /* CoreData.framework */; };
@@ -82,10 +83,21 @@
 		1ABC0FD218CF5BF80086484F /* info-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */; };
 		1ABC0FD318CF5BF80086484F /* info-www@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FCF18CF5BF80086484F /* info-www@2x.png */; };
 		1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */; };
+		1ABCA93B18E5D4A700D387DB /* AppIcon02_58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABCA93818E5D4A700D387DB /* AppIcon02_58@2x.png */; };
+		1ABCA93C18E5D4A700D387DB /* AppIcon02_80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABCA93918E5D4A700D387DB /* AppIcon02_80@2x.png */; };
+		1ABCA93D18E5D4A700D387DB /* AppIcon02_120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABCA93A18E5D4A700D387DB /* AppIcon02_120@2x.png */; };
 		1ABDF11918DB4CBC0009311B /* ABCalendarPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */; };
-		1ABDF11C18DB5AD00009311B /* Songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF11B18DB5AD00009311B /* Songs.json */; };
 		1ABDF11E18DB5BA10009311B /* Song.json in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF11D18DB5BA10009311B /* Song.json */; };
 		1ABDF11F18DB5D390009311B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC0F0718CE17650086484F /* Main.storyboard */; };
+		1ABDF12218DE81F00009311B /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDF12118DE81F00009311B /* UIView+Animation.m */; };
+		1ABDF12418DE83EA0009311B /* yukimura_fbprofile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF12318DE83EA0009311B /* yukimura_fbprofile@2x.png */; };
+		1ABDF12618E1C6F50009311B /* navigationbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF12518E1C6F50009311B /* navigationbar@2x.png */; };
+		1ABDF12818E1CED20009311B /* titleview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF12718E1CED20009311B /* titleview@2x.png */; };
+		1ABDF12F18E3221A0009311B /* UIColor+MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABDF12E18E3221A0009311B /* UIColor+MyColor.m */; };
+		1ABDF13118E3356A0009311B /* selectedCellBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF13018E3356A0009311B /* selectedCellBg@2x.png */; };
+		1ABDF14118E48F1D0009311B /* AppIcon_01_58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF13E18E48F1D0009311B /* AppIcon_01_58@2x.png */; };
+		1ABDF14218E48F1D0009311B /* AppIcon_01_80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF13F18E48F1D0009311B /* AppIcon_01_80@2x.png */; };
+		1ABDF14318E48F1D0009311B /* AppIcon_01_120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ABDF14018E48F1D0009311B /* AppIcon_01_120@2x.png */; };
 		1AD346BF18D1ED7100901758 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD346BE18D1ED7100901758 /* QuartzCore.framework */; };
 		1AD346DC18D1FD0E00901758 /* ImageManipulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD346DB18D1FD0E00901758 /* ImageManipulator.m */; };
 		1AD4B75718D00E820043609E /* SaintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD4B75618D00E820043609E /* SaintCell.m */; };
@@ -106,6 +118,7 @@
 		1A02343218D209A10013356D /* SaintInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaintInfoViewController.h; sourceTree = "<group>"; };
 		1A02343318D209A10013356D /* SaintInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaintInfoViewController.m; sourceTree = "<group>"; };
 		1A02343418D209A10013356D /* SaintInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaintInfoViewController.xib; sourceTree = "<group>"; };
+		1A02806118F3DAF500CBC99A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		1A3CD96018D9DC42001EFA3F /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
 		1A3CD96118D9DC42001EFA3F /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
 		1A3CD96218D9DC42001EFA3F /* CoreDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataViewController.xib; sourceTree = "<group>"; };
@@ -204,9 +217,22 @@
 		1ABC0FCE18CF5BF80086484F /* info-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-twitter@2x.png"; path = "Image/info-twitter@2x.png"; sourceTree = "<group>"; };
 		1ABC0FCF18CF5BF80086484F /* info-www@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-www@2x.png"; path = "Image/info-www@2x.png"; sourceTree = "<group>"; };
 		1ABC0FD018CF5BF80086484F /* info-yukimura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "info-yukimura@2x.png"; path = "Image/info-yukimura@2x.png"; sourceTree = "<group>"; };
+		1ABCA93818E5D4A700D387DB /* AppIcon02_58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon02_58@2x.png"; sourceTree = "<group>"; };
+		1ABCA93918E5D4A700D387DB /* AppIcon02_80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon02_80@2x.png"; sourceTree = "<group>"; };
+		1ABCA93A18E5D4A700D387DB /* AppIcon02_120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon02_120@2x.png"; sourceTree = "<group>"; };
 		1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABCalendarPicker.framework; sourceTree = "<group>"; };
-		1ABDF11B18DB5AD00009311B /* Songs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Songs.json; sourceTree = "<group>"; };
-		1ABDF11D18DB5BA10009311B /* Song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Song.json; sourceTree = "<group>"; };
+		1ABDF11D18DB5BA10009311B /* Song.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Song.json; path = ../Song.json; sourceTree = "<group>"; };
+		1ABDF12018DE81F00009311B /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		1ABDF12118DE81F00009311B /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		1ABDF12318DE83EA0009311B /* yukimura_fbprofile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yukimura_fbprofile@2x.png"; sourceTree = "<group>"; };
+		1ABDF12518E1C6F50009311B /* navigationbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar@2x.png"; sourceTree = "<group>"; };
+		1ABDF12718E1CED20009311B /* titleview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titleview@2x.png"; sourceTree = "<group>"; };
+		1ABDF12D18E3221A0009311B /* UIColor+MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyColor.h"; sourceTree = "<group>"; };
+		1ABDF12E18E3221A0009311B /* UIColor+MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyColor.m"; sourceTree = "<group>"; };
+		1ABDF13018E3356A0009311B /* selectedCellBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectedCellBg@2x.png"; sourceTree = "<group>"; };
+		1ABDF13E18E48F1D0009311B /* AppIcon_01_58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon_01_58@2x.png"; sourceTree = "<group>"; };
+		1ABDF13F18E48F1D0009311B /* AppIcon_01_80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon_01_80@2x.png"; sourceTree = "<group>"; };
+		1ABDF14018E48F1D0009311B /* AppIcon_01_120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon_01_120@2x.png"; sourceTree = "<group>"; };
 		1AD346BE18D1ED7100901758 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1AD346DA18D1FD0E00901758 /* ImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManipulator.h; sourceTree = "<group>"; };
 		1AD346DB18D1FD0E00901758 /* ImageManipulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManipulator.m; sourceTree = "<group>"; };
@@ -220,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A02806218F3DAF500CBC99A /* FacebookSDK.framework in Frameworks */,
 				1ABDF11918DB4CBC0009311B /* ABCalendarPicker.framework in Frameworks */,
 				1A3CD96718D9DEB8001EFA3F /* CoreData.framework in Frameworks */,
 				1A8F68E418D471130059AA50 /* EventKit.framework in Frameworks */,
@@ -297,8 +324,6 @@
 		1ABC0EE918CE17650086484F = {
 			isa = PBXGroup;
 			children = (
-				1ABDF11D18DB5BA10009311B /* Song.json */,
-				1ABDF11B18DB5AD00009311B /* Songs.json */,
 				1A8F690B18D5494C0059AA50 /* ABCalendarPicker.bundle */,
 				1ABC0EFB18CE17650086484F /* LichCongGiao */,
 				1ABC0F1A18CE17650086484F /* LichCongGiaoTests */,
@@ -319,6 +344,7 @@
 		1ABC0EF418CE17650086484F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A02806118F3DAF500CBC99A /* FacebookSDK.framework */,
 				1ABDF11818DB4CBC0009311B /* ABCalendarPicker.framework */,
 				1A3CD96618D9DEB8001EFA3F /* CoreData.framework */,
 				1A8F68E318D471130059AA50 /* EventKit.framework */,
@@ -346,6 +372,7 @@
 		1ABC0EFC18CE17650086484F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1ABDF11D18DB5BA10009311B /* Song.json */,
 				1ABC0F4418CEBFC80086484F /* Image */,
 				1ABC0EFD18CE17650086484F /* LichCongGiao-Info.plist */,
 				1ABC0EFE18CE17650086484F /* InfoPlist.strings */,
@@ -399,6 +426,16 @@
 		1ABC0F4418CEBFC80086484F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				1ABCA93818E5D4A700D387DB /* AppIcon02_58@2x.png */,
+				1ABCA93918E5D4A700D387DB /* AppIcon02_80@2x.png */,
+				1ABCA93A18E5D4A700D387DB /* AppIcon02_120@2x.png */,
+				1ABDF13E18E48F1D0009311B /* AppIcon_01_58@2x.png */,
+				1ABDF13F18E48F1D0009311B /* AppIcon_01_80@2x.png */,
+				1ABDF14018E48F1D0009311B /* AppIcon_01_120@2x.png */,
+				1ABDF13018E3356A0009311B /* selectedCellBg@2x.png */,
+				1ABDF12718E1CED20009311B /* titleview@2x.png */,
+				1ABDF12518E1C6F50009311B /* navigationbar@2x.png */,
+				1ABDF12318DE83EA0009311B /* yukimura_fbprofile@2x.png */,
 				1A92E2C818D0AA52003E9F97 /* search-icon@2x.png */,
 				1AA5767B18CF5F22001D50C6 /* info-church@2x.png */,
 				1ABC0FCD18CF5BF80086484F /* info-fb@2x.png */,
@@ -571,22 +608,18 @@
 		1AD346C318D1F4BF00901758 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1AD346CD18D1F5BD00901758 /* UIImage */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		1AD346CD18D1F5BD00901758 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
 				1AD346DA18D1FD0E00901758 /* ImageManipulator.h */,
 				1AD346DB18D1FD0E00901758 /* ImageManipulator.m */,
 				1A8F684B18D2B9560059AA50 /* UIImage+Resize.h */,
 				1A8F684C18D2B9560059AA50 /* UIImage+Resize.m */,
 				1A8F684E18D2C5CC0059AA50 /* UITextView+GetHeight.h */,
 				1A8F684F18D2C5CC0059AA50 /* UITextView+GetHeight.m */,
+				1ABDF12018DE81F00009311B /* UIView+Animation.h */,
+				1ABDF12118DE81F00009311B /* UIView+Animation.m */,
+				1ABDF12D18E3221A0009311B /* UIColor+MyColor.h */,
+				1ABDF12E18E3221A0009311B /* UIColor+MyColor.m */,
 			);
-			name = UIImage;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		1AD4B75818D00E860043609E /* SaintCell */ = {
@@ -677,15 +710,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABDF11F18DB5D390009311B /* Main.storyboard in Resources */,
+				1ABDF12818E1CED20009311B /* titleview@2x.png in Resources */,
+				1ABDF12418DE83EA0009311B /* yukimura_fbprofile@2x.png in Resources */,
 				1A8F690C18D5494C0059AA50 /* ABCalendarPicker.bundle in Resources */,
 				1ABC0F9518CF458E0086484F /* menu-cell-03@2x.png in Resources */,
 				1ABC0FAC18CF4D660086484F /* PrayerViewController.xib in Resources */,
 				1ABC0F9318CF458E0086484F /* menu-cell-01@2x.png in Resources */,
+				1ABCA93D18E5D4A700D387DB /* AppIcon02_120@2x.png in Resources */,
 				1ABC0FC518CF51F60086484F /* AppIcon80@2x.png in Resources */,
 				1ABC0F6118CF02D50086484F /* img3@2x~iphone.png in Resources */,
+				1ABDF14118E48F1D0009311B /* AppIcon_01_58@2x.png in Resources */,
 				1ABC0FB218CF4E0E0086484F /* MusicViewController.xib in Resources */,
 				1A3CD96418D9DC42001EFA3F /* CoreDataViewController.xib in Resources */,
 				1ABC0F9618CF458E0086484F /* menu-cell-04@2x.png in Resources */,
+				1ABDF13118E3356A0009311B /* selectedCellBg@2x.png in Resources */,
 				1ABC0F3718CEBFA30086484F /* ImageViewController.xib in Resources */,
 				1AA5767C18CF5F22001D50C6 /* info-church@2x.png in Resources */,
 				1ABC0F9418CF458E0086484F /* menu-cell-02@2x.png in Resources */,
@@ -694,9 +732,12 @@
 				1ABC0F6318CF02D50086484F /* img5@2x~iphone.png in Resources */,
 				1AD4B75A18D00E910043609E /* SaintCell.xib in Resources */,
 				1A02343618D209A10013356D /* SaintInfoViewController.xib in Resources */,
+				1ABDF14218E48F1D0009311B /* AppIcon_01_80@2x.png in Resources */,
+				1ABCA93C18E5D4A700D387DB /* AppIcon02_80@2x.png in Resources */,
 				1ABC0F5E18CF02D50086484F /* img0@2x~iphone.png in Resources */,
 				1ABC0F3118CEB1EF0086484F /* DateViewController.xib in Resources */,
 				1ABDF11E18DB5BA10009311B /* Song.json in Resources */,
+				1ABDF12618E1C6F50009311B /* navigationbar@2x.png in Resources */,
 				1ABC0FC418CF51F60086484F /* AppIcon58@2x.png in Resources */,
 				1ABC0F0E18CE17650086484F /* Images.xcassets in Resources */,
 				1ABC0F0018CE17650086484F /* InfoPlist.strings in Resources */,
@@ -711,7 +752,7 @@
 				1ABC0F9718CF458E0086484F /* menu-cell-05@2x.png in Resources */,
 				1ABC0F6E18CF3DFD0086484F /* MenuCell.xib in Resources */,
 				1ABC0FD418CF5BF80086484F /* info-yukimura@2x.png in Resources */,
-				1ABDF11C18DB5AD00009311B /* Songs.json in Resources */,
+				1ABCA93B18E5D4A700D387DB /* AppIcon02_58@2x.png in Resources */,
 				1ABC0F6218CF02D50086484F /* img4@2x~iphone.png in Resources */,
 				1ABC0F6018CF02D50086484F /* img2@2x~iphone.png in Resources */,
 				1A8F685B18D3FAF60059AA50 /* MusicInfoViewController.xib in Resources */,
@@ -721,6 +762,7 @@
 				1A92E2C918D0AA52003E9F97 /* search-icon@2x.png in Resources */,
 				1ABC0FD118CF5BF80086484F /* info-fb@2x.png in Resources */,
 				1ABC0FC618CF51F60086484F /* AppIcon120@2x.png in Resources */,
+				1ABDF14318E48F1D0009311B /* AppIcon_01_120@2x.png in Resources */,
 				1ABC0F9818CF458E0086484F /* menu-cell-06@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +793,8 @@
 				1ABC0FAB18CF4D660086484F /* PrayerViewController.m in Sources */,
 				1A3CD97918D9F001001EFA3F /* LichCongGiaoCoreData.xcdatamodeld in Sources */,
 				1A8F685018D2C5CC0059AA50 /* UITextView+GetHeight.m in Sources */,
+				1ABDF12218DE81F00009311B /* UIView+Animation.m in Sources */,
+				1ABDF12F18E3221A0009311B /* UIColor+MyColor.m in Sources */,
 				1ABC0F0218CE17650086484F /* main.m in Sources */,
 				1ABC0FC918CF58720086484F /* InfoCell.m in Sources */,
 				1A02343518D209A10013356D /* SaintInfoViewController.m in Sources */,
